@@ -1,35 +1,105 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Footer from './components/Footer'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const technologies = [
+    { name: 'React 19', icon: '⚛️', color: '#61dafb' },
+    { name: 'TypeScript', icon: '🔷', color: '#3178c6' },
+    { name: 'Vite', icon: '⚡', color: '#646cff' },
+    { name: 'Tailwind CSS', icon: '💨', color: '#06b6d4' },
+    { name: 'Firebase', icon: '🔥', color: '#ffca28' },
+    { name: 'Supabase', icon: '🗄️', color: '#3ecf8e' },
+    { name: 'PWA', icon: '📱', color: '#5a0fc8' },
+  ]
 
   return (
     <>
-      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-        <div>
-          <a href="https://vite.dev" target="_blank">
-            <img src={viteLogo} className="logo" alt="Vite logo" />
-          </a>
-          <a href="https://react.dev" target="_blank">
-            <img src={reactLogo} className="logo react" alt="React logo" />
-          </a>
-        </div>
-        <h1>Vite + React</h1>
-        <div className="card">
-          <button onClick={() => setCount((count) => count + 1)}>
-            count is {count}
-          </button>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test HMR
+      <div className="main-content">
+        {/* Hero Section */}
+        <div className="hero-section">
+          <div className="hero-icon">🚀</div>
+          <h1 className="hero-title">
+            Plantilla Base
+            <span className="gradient-text"> Lista para Usar</span>
+          </h1>
+          <p className="hero-subtitle">
+            Comienza tu próximo proyecto con una base profesional que incluye
+            las mejores tecnologías del momento
           </p>
+          
+          <div className="hero-buttons">
+            <button className="btn-primary">
+              Comenzar Proyecto
+            </button>
+            <button className="btn-secondary">
+              Ver Documentación
+            </button>
+          </div>
         </div>
-        <p className="read-the-docs">
-          Click on the Vite and React logos to learn more
-        </p>
+
+        {/* Technologies Grid */}
+        <div className="technologies-section">
+          <h2 className="section-title">🛠️ Tecnologías Incluidas</h2>
+          <div className="tech-grid">
+            {technologies.map((tech) => (
+              <div key={tech.name} className="tech-card">
+                <div className="tech-icon" style={{ color: tech.color }}>
+                  {tech.icon}
+                </div>
+                <h3 className="tech-name">{tech.name}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Features Section */}
+        <div className="features-section">
+          <h2 className="section-title">✨ Características</h2>
+          <div className="features-grid">
+            <div className="feature-card">
+              <div className="feature-icon">🎨</div>
+              <h3 className="feature-title">Sistema de Colores</h3>
+              <p className="feature-description">
+                Paleta de colores centralizada y fácil de personalizar
+              </p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">🌓</div>
+              <h3 className="feature-title">Modo Oscuro</h3>
+              <p className="feature-description">
+                Soporte automático para tema claro y oscuro
+              </p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">📦</div>
+              <h3 className="feature-title">Componentes</h3>
+              <p className="feature-description">
+                Componentes reutilizables listos para usar
+              </p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">🔒</div>
+              <h3 className="feature-title">Autenticación</h3>
+              <p className="feature-description">
+                Firebase y Supabase preconfigurados
+              </p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">⚡</div>
+              <h3 className="feature-title">Rápido</h3>
+              <p className="feature-description">
+                Optimizado con Vite para máxima velocidad
+              </p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">📱</div>
+              <h3 className="feature-title">PWA Ready</h3>
+              <p className="feature-description">
+                Convertible a app instalable en dispositivos
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
       <Footer />
     </>
