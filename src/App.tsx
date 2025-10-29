@@ -8,8 +8,8 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-      <div style={{ flex: 1 }}>
+    <>
+      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
         <div>
           <a href="https://vite.dev" target="_blank">
             <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -32,7 +32,7 @@ function App() {
         </p>
       </div>
       <Footer />
-    </div>
+    </>
   )
 }
 
