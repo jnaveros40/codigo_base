@@ -15,10 +15,12 @@ const Home = () => {
     <div className="main-content">
       {/* Hero Section */}
       <div className="hero-section">
-        <div className="hero-icon">🚀</div>
+        <div className="hero-icon">
+          <img src="/IngNavs.png" alt="Logo" style={{ width: '10%', height: '10%', objectFit: 'contain' }} />
+        </div>
         <h1 className="hero-title">
-          Plantilla Base
-          <span className="gradient-text"> Lista para Usar</span>
+          Esta es una plantilla
+          <span className="gradient-text"> lista para usar</span>
         </h1>
         <p className="hero-subtitle">
           Comienza tu próximo proyecto con una base profesional que incluye
