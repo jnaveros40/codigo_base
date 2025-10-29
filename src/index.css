@@ -1,3 +1,8 @@
+/* Importar Tailwind */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
 /* Importar variables de colores */
 @import './styles/variables.css';
 
